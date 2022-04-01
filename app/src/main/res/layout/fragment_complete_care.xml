@@ -22,6 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="27dp"
         android:layout_marginTop="110dp"
+
         android:layout_marginEnd="24dp"
         android:hint="your pet name" />
 
