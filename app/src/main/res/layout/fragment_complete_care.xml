@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +9,100 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="25dp"
         android:text="@string/complete_care_fragment" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/pet_name"
+        android:layout_width="375dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="24dp"
+        android:hint="your pet name" />
+
+    <EditText
+        android:id="@+id/pet_type"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="168dp"
+        android:hint="your pet breed" />
+
+    <EditText
+        android:id="@+id/pickup_loc"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="226dp"
+        android:hint="your pet pickup location" />
+
+    <EditText
+        android:id="@+id/pickup_time"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:hint="your pet pickup time" />
+
+    <TextView
+        android:id="@+id/title_select_treatment"
+        android:layout_width="360dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp"
+        android:text="select treatment" />
+
+    <CheckBox
+        android:id="@+id/bath_opt"
+        android:layout_width="360dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="334dp"
+        android:text="bathing" />
+
+    <CheckBox
+        android:id="@+id/nail_trim_opt"
+        android:layout_width="360dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="295dp"
+        android:text="nail trimming" />
+
+    <CheckBox
+        android:id="@+id/haircut_opt"
+        android:layout_width="360dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="258dp"
+        android:text="haircut" />
+
+    <CheckBox
+        android:id="@+id/ear_clean_opt"
+        android:layout_width="360dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="220dp"
+        android:text="ear cleaning" />
+
+    <Button
+        android:id="@+id/btn_book"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:text="book" />
+</RelativeLayout>
