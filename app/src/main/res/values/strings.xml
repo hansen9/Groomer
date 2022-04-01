@@ -1,6 +1,23 @@
 <resources>
     <string name="app_name">Groomer</string>
     <string name="title_home">Home</string>
+    <string name="menu_bathing">Menu Bathing</string>
+
+    <string name="nail_trimming">Nail Trimming</string>
+    <string name="menu_nail">Menu Nail Trimming</string>
+
+    <string name="haircut">Haircut</string>
+    <string name="menu_haircut">Menu Haircut</string>
+
+    <string name="ear_cleaning">Ear Cleaning</string>
+    <string name="menu_ear_cleaning">Menu Ear Cleaning</string>
+
+    <string name="complete_care">Complete Care</string>
+    <string name="menu_complete_care">Menu Complete Care</string>
+
+    <string name="consument_review">Consument Review</string>
+    <string name="menu_consument_review">Menu Consument Review</string>
+
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
