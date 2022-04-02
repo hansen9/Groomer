@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Groomer</string>
     <string name="title_home">Home</string>
+    <string name="bathing">Menu Bathing</string>
     <string name="menu_bathing">Menu Bathing</string>
 
     <string name="nail_trimming">Nail Trimming</string>
