@@ -47,12 +47,12 @@ class HomeFragment : Fragment() , View.OnClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btnCompleteCate: Button = view.findViewById(R.id.btn_complete_care)
+        val btnCompleteCate: Button = view.findViewById(R.id.btn_menu_complete_care)
         btnCompleteCate.setOnClickListener(this)
     }
 
     override fun onClick(v: View){
-        if(v.id == R.id.btn_complete_care){
+        if(v.id == R.id.btn_menu_complete_care){
             val mCompleteCFragment = completeCareFragment()
             val mFragmentManager = fragmentManager as FragmentManager
             mFragmentManager
