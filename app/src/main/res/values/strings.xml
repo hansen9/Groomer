@@ -21,6 +21,9 @@
 
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="join">Join</string>
+    <string name="button_join">Join</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="complete_care_fragment">welcome to complete care</string>
 </resources>
