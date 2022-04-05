@@ -1,15 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/complete_care"
-    tools:context=".ui.completeCare.completeCareFragment">
+    tools:context=".ui.services.completeCareFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/complete_care_fragment" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/pet_name"
+                android:layout_width="375dp"
+                android:layout_height="65dp"
+                android:layout_margin="15dp"
+                android:hint="your pet name" />
+
+            <EditText
+                android:id="@+id/pickup_time"
+                android:layout_width="360dp"
+                android:layout_height="65dp"
+                android:layout_margin="15dp"
+                android:hint="your pet pickup time" />
+
+            <EditText
+                android:id="@+id/pickup_loc"
+                android:layout_width="360dp"
+                android:layout_height="65dp"
+                android:layout_margin="15dp"
+                android:hint="your pet pickup location" />
+
+            <EditText
+                android:id="@+id/pet_type"
+                android:layout_width="360dp"
+                android:layout_height="65dp"
+                android:layout_margin="15dp"
+                android:hint="your pet breed" />
+
+            <TextView
+                android:id="@+id/title_select_treatment"
+                android:layout_width="360dp"
+                android:layout_height="35dp"
+                android:layout_margin="15dp"
+                android:text="select treatment"
+                android:textSize="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/haircut_opt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_margin="10dp"
+                    android:text="@string/haircut" />
+
+                <CheckBox
+                    android:id="@+id/bath_opt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_margin="10dp"
+                    android:text="@string/bathing" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp">
+
+                <CheckBox
+                    android:id="@+id/ear_clean_opt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_margin="10dp"
+                    android:text="@string/ear_cleaning" />
+
+                <CheckBox
+                    android:id="@+id/nail_trim_opt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_margin="10dp"
+                    android:text="@string/nail_trimming" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="419dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_book"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp"
+            android:text="book" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
