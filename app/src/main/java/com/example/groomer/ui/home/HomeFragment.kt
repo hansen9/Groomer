@@ -12,7 +12,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.groomer.R
 import com.example.groomer.databinding.FragmentHomeBinding
-import com.example.groomer.ui.completeCare.completeCareFragment
+import com.example.groomer.ui.services.BathingFragment
+import com.example.groomer.ui.services.completeCareFragment
 
 class HomeFragment : Fragment() , View.OnClickListener{
 
@@ -34,10 +35,10 @@ class HomeFragment : Fragment() , View.OnClickListener{
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+//        val textView: TextView = binding.textHome
+//        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
     override fun onDestroyView() {
@@ -48,7 +49,9 @@ class HomeFragment : Fragment() , View.OnClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btnCompleteCate: Button = view.findViewById(R.id.btn_menu_complete_care)
+        val btnBathing: Button = view.findViewById(R.id.btn_menu_bathing)
         btnCompleteCate.setOnClickListener(this)
+        btnBathing.setOnClickListener(this)
     }
 
     override fun onClick(v: View){
@@ -59,6 +62,17 @@ class HomeFragment : Fragment() , View.OnClickListener{
                 .beginTransaction()
                 .replace(R.id.container, mCompleteCFragment,
                     completeCareFragment::class.java.simpleName)
+                .addToBackStack(null)
+                .commit()
+        } else if(v.id == R.id.btn_menu_bathing) {
+            val mBathingFragment = BathingFragment()
+            val mFragmentManager = fragmentManager as FragmentManager
+            mFragmentManager
+                .beginTransaction()
+                .replace(
+                    R.id.container, mBathingFragment,
+                    completeCareFragment::class.java.simpleName
+                )
                 .addToBackStack(null)
                 .commit()
         }
