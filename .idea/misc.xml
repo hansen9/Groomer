@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/activity_main.xml" value="0.11296859169199595" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_complete_care.xml" value="0.11296859169199595" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_bathing.xml" value="0.1716485507246377" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_complete_care.xml" value="0.33" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_payment.xml" value="0.1716485507246377" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Groomer/app/src/main/res/layout/activity_main.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/drawable/groomer_logo.xml" value="0.1895" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/drawable/splash_groomer.xml" value="0.1" />
