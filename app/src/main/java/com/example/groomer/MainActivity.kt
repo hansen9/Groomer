@@ -2,16 +2,8 @@ package com.example.groomer
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.groomer.databinding.ActivityMainBinding
-import com.example.groomer.ui.completeCare.completeCareFragment
 import com.example.groomer.ui.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
