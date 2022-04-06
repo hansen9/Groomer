@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Groomer">
         <activity
-            android:name=".JoinActivity"
+            android:name=".SignInActivity"
             android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -22,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

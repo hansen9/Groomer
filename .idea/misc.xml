@@ -12,6 +12,8 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout-v31/activity_splash.xml" value="0.15416666666666667" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/activity_join.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/activity_sign_in.xml" value="0.136" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/activity_splash.xml" value="0.152" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/activity_splash_screen.xml" value="0.11594202898550725" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_bathing.xml" value="0.20677083333333332" />
@@ -19,6 +21,7 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_notifications.xml" value="0.11510416666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_sign_up.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_splash_screen.xml" value="0.19583333333333333" />
       </map>
     </option>
