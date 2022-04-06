@@ -4,14 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/activity_main.xml" value="0.11296859169199595" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/form_basic.xml" value="0.16394927536231885" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_bathing.xml" value="0.16394927536231885" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_complete_care.xml" value="0.25" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_ear_clean.xml" value="0.2" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_haircut.xml" value="0.16394927536231885" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_complete_care.xml" value="0.11296859169199595" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_nail_trim.xml" value="0.16394927536231885" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_payment.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Groomer/app/src/main/res/layout/activity_main.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/drawable/groomer_logo.xml" value="0.1895" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/drawable/splash_groomer.xml" value="0.1" />
@@ -22,11 +16,16 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/activity_splash.xml" value="0.152" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/activity_splash_screen.xml" value="0.11594202898550725" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/form_basic.xml" value="0.19375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_bathing.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_complete_care.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_ear_clean.xml" value="0.19375" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_haircut.xml" value="0.19375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_nail_trim.xml" value="0.19375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_notifications.xml" value="0.11510416666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_payment.xml" value="0.19375" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_sign_up.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/TugasBesar/app/src/main/res/layout/fragment_splash_screen.xml" value="0.19583333333333333" />
       </map>
