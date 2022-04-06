@@ -3,9 +3,9 @@ package com.example.groomer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class JoinActivity : AppCompatActivity() {
+class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_join)
+        setContentView(R.layout.activity_sign_in)
     }
 }

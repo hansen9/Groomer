@@ -24,6 +24,22 @@
 
     <string name="join">Join</string>
     <string name="button_join">Join</string>
+
+    <string name="sign_up">Sign Up</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="link_sign_in">Sign In</string>
+    <string name="sign_in_text">Do you have account?</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="link_sign_up">Sign Up</string>
+    <string name="sign_up_text">Dont have account?</string>
+
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="no_hp">No. Hp</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="complete_care_fragment">welcome to complete care</string>
     <!-- TODO: Remove or change this placeholder text -->
