@@ -44,7 +44,15 @@
     <string name="home">Home</string>
     <string name="history">History</string>
     <string name="account">Account</string>
+    
+    <string name="nama_pemilik">Nama Pemilik</string>
+    <string name="jenis_hewan">Jenis Hewan</string>
+    <string name="treatment">Treatment</string>
+    <string name="komentar">Komentar</string>
 
+    <string name="posting">Post</string>
+    <string name="cancel_post">Cancel</string>
+    
     <!-- TODO: Remove or change this placeholder text -->
     <string name="complete_care_fragment">welcome to complete care</string>
     <!-- TODO: Remove or change this placeholder text -->
