@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Groomer">
         <activity
+            android:name=".ButtonMenu"
+            android:exported="false"
+            android:label="@string/title_activity_button_menu" />
+        <activity
             android:name=".SignInActivity"
             android:exported="false" />
         <activity
