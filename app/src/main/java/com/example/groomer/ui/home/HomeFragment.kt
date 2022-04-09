@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
 import com.example.groomer.R
 import com.example.groomer.databinding.FragmentHomeBinding
+import com.example.groomer.ui.form.FormReviewFragment
 import com.example.groomer.ui.services.*
 
 class HomeFragment : Fragment() , View.OnClickListener{
@@ -47,12 +48,14 @@ class HomeFragment : Fragment() , View.OnClickListener{
         val btnHaircut: Button = view.findViewById(R.id.btn_menu_haircut)
         val btnEarCleaning: Button = view.findViewById(R.id.btn_menu_ear_cleaning)
         val btnNailTrimming: Button = view.findViewById(R.id.btn_menu_nail_trimming)
+        val btnFormReview: Button = view.findViewById(R.id.btn_menu_consument_review)
 
         btnCompleteCate.setOnClickListener(this)
         btnBathing.setOnClickListener(this)
         btnHaircut.setOnClickListener(this)
         btnNailTrimming.setOnClickListener(this)
         btnEarCleaning.setOnClickListener(this)
+        btnFormReview.setOnClickListener(this)
     }
 
     override fun onClick(v: View){
@@ -106,6 +109,17 @@ class HomeFragment : Fragment() , View.OnClickListener{
                 .replace(
                     R.id.container, mNailTrimFragment,
                     NailTrimFragment::class.java.simpleName
+                )
+                .addToBackStack(null)
+                .commit()
+        } else if(v.id == R.id.btn_menu_consument_review){
+            val mFormReviewFragment = FormReviewFragment()
+            val mFragmentManager = fragmentManager as FragmentManager
+            mFragmentManager
+                .beginTransaction()
+                .replace(
+                    R.id.container, mFormReviewFragment,
+                    FormReviewFragment::class.java.simpleName
                 )
                 .addToBackStack(null)
                 .commit()

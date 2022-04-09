@@ -16,16 +16,47 @@
     <string name="complete_care">Complete Care</string>
     <string name="menu_complete_care">Menu Complete Care</string>
 
-    <string name="consument_review">Consument Review</string>
-    <string name="menu_consument_review">Menu Consument Review</string>
+    <string name="my_review">Form Review</string>
+    <string name="menu_my_review">Menu My Review</string>
 
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
     <string name="join">Join</string>
     <string name="button_join">Join</string>
+
+    <string name="sign_up">Sign Up</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="link_sign_in">Sign In</string>
+    <string name="sign_in_text">Do you have account?</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="link_sign_up">Sign Up</string>
+    <string name="sign_up_text">Dont have account?</string>
+
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="no_hp">No. Hp</string>
+
+    <string name="consument_review">Review</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="account">Account</string>
+    
+    <string name="nama_pemilik">Nama Pemilik</string>
+    <string name="jenis_hewan">Jenis Hewan</string>
+    <string name="treatment">Treatment</string>
+    <string name="komentar">Komentar</string>
+
+    <string name="posting">Post</string>
+    <string name="cancel_post">Cancel</string>
+    
     <!-- TODO: Remove or change this placeholder text -->
     <string name="complete_care_fragment">welcome to complete care</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_button_menu">ButtonMenu</string>
+    <string name="title_activity_menu_button">MenuButtonActivity</string>
 </resources>
