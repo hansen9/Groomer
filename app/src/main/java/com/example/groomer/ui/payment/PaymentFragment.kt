@@ -44,10 +44,10 @@ class PaymentFragment : Fragment() {
         _binding = FragmentPaymentBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.petNamePay
-        paymentModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+//        val textView: TextView = binding.petNamePay
+//        paymentModel.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 
