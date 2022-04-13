@@ -27,8 +27,6 @@ class PaymentFragment : Fragment() {
     private lateinit var paymentModel: PaymentModel
     private var _binding: FragmentPaymentBinding? = null
 
-    private val binding get() = _binding!!
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -38,33 +36,7 @@ class PaymentFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        paymentModel =
-            ViewModelProvider(this).get(PaymentModel::class.java)
-
-        _binding = FragmentPaymentBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-//        val textView: TextView = binding.petNamePay
-//        paymentModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
-        return root
+        return inflater.inflate(R.layout.fragment_payment, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PaymentFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            PaymentFragment().apply {
-
-            }
-    }
 }
