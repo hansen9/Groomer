@@ -3,8 +3,10 @@ package com.example.groomer
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.groomer.databinding.ActivityMainBinding
 import com.example.groomer.ui.home.HomeFragment
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class MainActivity : AppCompatActivity() {
 

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Groomer">
         <activity
+            android:name=".AllReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewAddUpdateActivity"
+            android:exported="false" />
+        <activity
             android:name=".ButtonMenu"
             android:exported="false"
             android:label="@string/title_activity_button_menu" />
