@@ -1,4 +1,10 @@
 <resources>
+    <string name="pet_name">Nama Peliharaan</string>
+    <string name="pet_type">Jenis Peliharaan</string>
+    <string name="pickup_loc">tempat penjemputan</string>
+    <string name="pickup_time">waktu penjemputan</string>
+    <string name="price">Harga total</string>
+    <string name="payment_method">metode pembayaran</string>
     <string name="app_name">Groomer</string>
     <string name="title_home">Home</string>
     <string name="bathing">Menu Bathing</string>
