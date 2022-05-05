@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 class SignUpActivity : AppCompatActivity() , View.OnClickListener {
+
     private lateinit var userName: EditText
     private lateinit var userEmail: EditText
     private lateinit var userPassword: EditText
@@ -37,6 +38,7 @@ class SignUpActivity : AppCompatActivity() , View.OnClickListener {
         ).getReference("users")
         mAuth = Firebase.auth
 
+        val currentUser = mAuth.currentUser
         userName = findViewById(R.id.edit_username)
         userEmail = findViewById(R.id.edit_email)
         userPassword = findViewById(R.id.edit_password)
@@ -95,10 +97,11 @@ class SignUpActivity : AppCompatActivity() , View.OnClickListener {
             .addOnCompleteListener(this){task->
                 if(task.isSuccessful()){
                     val  user = User(name,email)
-                    val id: String
-                    id  = userDB.push().getKey().toString()
+                    val currUser = mAuth.currentUser
                     Log.d(TAG, "createUserWithEmail:success")
-                    userDB.child(id).setValue(user)
+                    if (currUser != null) {
+                        userDB.child(currUser.uid.toString()).setValue(user)
+                    }
 //                    ProgressBar.setVisibility(View.GONE)
                 }else{
                     Log.w(TAG, "createUserWithEmail:Failure", task.exception)
