@@ -132,13 +132,17 @@ class PaymentFragment : Fragment(), ValueEventListener {
                     price
                 )
                 val id: String
-//                id  = database.push().getKey().toString()
-//
-//                database.child(id).setValue(transaction)
+                id  = database.push().getKey().toString()
+
+                database.child(id).setValue(transaction)
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Toast.makeText(
+                    activity,
+                    "failed to register! Try Again!",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         })
 

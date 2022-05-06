@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.groomer.R
 import com.example.groomer.Review
 import com.example.groomer.Transaction
@@ -55,13 +56,17 @@ class FormReviewFragment : Fragment() {
                 )
 
                 val id: String
-//                id  = database.push().getKey().toString()
-//
-//                database.child(id).setValue(transaction)
+                id  = database.push().getKey().toString()
+
+                database.child(id).setValue(review)
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Toast.makeText(
+                    activity,
+                    "failed to register! Try Again!",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         })
 
