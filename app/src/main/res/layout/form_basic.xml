@@ -23,12 +23,18 @@
             android:layout_margin="10dp"
             android:hint="your pet name" />
 
-        <EditText
-            android:id="@+id/pickup_time"
-            android:layout_width="360dp"
-            android:layout_height="65dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pickup_date_txt"
+            android:text=""/>
+        <Button
+            android:id="@+id/pickup_date_btn"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
             android:layout_margin="10dp"
-            android:hint="your pet pickup time" />
+            android:textColor="@color/white"
+            android:hint="your pet pickup date" />
 
         <EditText
             android:id="@+id/pickup_loc"

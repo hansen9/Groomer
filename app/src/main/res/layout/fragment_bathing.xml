@@ -7,6 +7,7 @@
     android:id="@+id/bathing"
     tools:context=".ui.services.BathingFragment">
 
-    <include layout="@layout/form_basic"/>
+    <include android:id="@+id/bathing_layout"
+        layout="@layout/form_basic"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

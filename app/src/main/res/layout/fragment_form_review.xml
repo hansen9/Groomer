@@ -1,80 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.form.FormReviewFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Form Review"
-        android:layout_marginVertical="40dp"
-        android:textSize="20dp"
-        android:padding="10dp"
-        android:layout_marginLeft="20dp"/>
-
-    <EditText
-        android:id="@+id/pemilik"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="100dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginBottom="0dp"
-        android:hint="@string/nama_pemilik"
-        android:inputType="textPersonName"
-        android:textColorHighlight="@color/black"
-        android:textColorHint="@android:color/darker_gray" />
+        android:padding="10dp"
+        android:text="Form Review"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/pemilik"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="@string/nama_pemilik"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:textColorHighlight="@color/black"-->
+<!--        android:textColorHint="@android:color/darker_gray"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.648"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.211" />-->
 
     <EditText
         android:id="@+id/jenis"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="207dp"
-        android:layout_marginLeft="60dp"
-        android:layout_alignParentStart="true"
         android:hint="@string/jenis_hewan"
         android:inputType="text"
         android:textColorHighlight="@color/black"
-        android:textColorHint="@android:color/darker_gray" />
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
 
     <EditText
         android:id="@+id/treatment"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="309dp"
-        android:layout_marginLeft="60dp"
-        android:layout_alignParentStart="true"
         android:hint="@string/treatment"
         android:inputType="text"
         android:textColorHighlight="@color/black"
-        android:textColorHint="@android:color/darker_gray" />
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.486" />
 
     <EditText
         android:id="@+id/comment"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="407dp"
-        android:layout_marginLeft="60dp"
-        android:layout_alignParentStart="true"
         android:hint="@string/komentar"
         android:inputType="text"
         android:textColorHighlight="@color/black"
-        android:textColorHint="@android:color/darker_gray" />
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616" />
 
     <Button
         android:id="@+id/post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/posting"
-        android:layout_marginLeft="60dp"
-        android:layout_marginVertical="500dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
 
     <Button
         android:id="@+id/cancle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cancel_post"
-        android:layout_marginLeft="259dp"
-        android:layout_marginVertical="500dp"/>
-</RelativeLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.765" />
+</androidx.constraintlayout.widget.ConstraintLayout>

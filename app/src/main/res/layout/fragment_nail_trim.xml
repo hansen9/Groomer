@@ -7,6 +7,7 @@
     android:id="@+id/nail_trim"
     tools:context=".ui.services.BathingFragment">
 
-    <include layout="@layout/form_basic"/>
+    <include android:id="@+id/nail_trim_layout"
+        layout="@layout/form_basic"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
