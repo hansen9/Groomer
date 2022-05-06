@@ -31,12 +31,18 @@
                 android:layout_margin="15dp"
                 android:hint="your pet name" />
 
-            <EditText
-                android:id="@+id/pickup_time"
-                android:layout_width="360dp"
-                android:layout_height="65dp"
-                android:layout_margin="15dp"
-                android:hint="your pet pickup time" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pickup_date_txt"
+                android:text=""/>
+            <Button
+                android:id="@+id/pickup_date_btn"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:hint="your pet pickup date" />
 
             <EditText
                 android:id="@+id/pickup_loc"
@@ -69,14 +75,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="55dp"
                     android:layout_margin="10dp"
-                    android:text="@string/haircut" />
+                    android:text="@string/haircut"/>
 
                 <CheckBox
                     android:id="@+id/bath_opt"
                     android:layout_width="wrap_content"
                     android:layout_height="55dp"
                     android:layout_margin="10dp"
-                    android:text="@string/bathing" />
+                    android:text="@string/bathing"/>
             </LinearLayout>
 
             <LinearLayout
@@ -89,14 +95,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="55dp"
                     android:layout_margin="10dp"
-                    android:text="@string/ear_cleaning" />
+                    android:text="@string/ear_cleaning"/>
 
                 <CheckBox
                     android:id="@+id/nail_trim_opt"
                     android:layout_width="wrap_content"
                     android:layout_height="55dp"
                     android:layout_margin="10dp"
-                    android:text="@string/nail_trimming" />
+                    android:text="@string/nail_trimming"/>
 
             </LinearLayout>
 

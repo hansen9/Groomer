@@ -1,61 +1,88 @@
 package com.example.groomer.ui.services
 
+import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.FragmentManager
+import com.example.groomer.Communicator
 import com.example.groomer.R
 import com.example.groomer.databinding.FragmentCompleteCareBinding
+import com.example.groomer.databinding.FragmentHaircutBinding
 import com.example.groomer.ui.home.CompleteCareModel
 import com.example.groomer.ui.payment.PaymentFragment
+import kotlinx.android.synthetic.main.form_basic.view.*
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class completeCareFragment : Fragment() {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [completeCareFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class completeCareFragment : Fragment(), View.OnClickListener {
-    // TODO: Rename and change types of parameters
-    private lateinit var completeCareModel: CompleteCareModel
-    private var _binding: FragmentCompleteCareBinding? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var comm: Communicator
+    private var ccBinding: FragmentCompleteCareBinding? = null
+    private lateinit var servicesPicked: ArrayList<String>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_complete_care, container, false)
-    }
+        val binding = FragmentCompleteCareBinding.inflate(inflater, container, false)
+        ccBinding = binding
+        servicesPicked = arrayListOf<String>()
+        var dateTime = ""
+        val c = Calendar.getInstance()
+        val startYear = c.get(Calendar.YEAR)
+        val startMonth = c.get(Calendar.MONTH)
+        val startDay = c.get(Calendar.DAY_OF_MONTH)
+        val startHour = c.get(Calendar.HOUR_OF_DAY)
+        val startMinute = c.get(Calendar.MINUTE)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val btnBook: Button = view.findViewById(R.id.btn_book)
-        btnBook.setOnClickListener(this)
-    }
+        binding.pickupDateBtn.setOnClickListener({
+            DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener { _, year, month, day ->
+                TimePickerDialog(requireContext(), TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+                    dateTime = "" + day.toString() + "/" + month.toString() + "/" + year.toString() + " at " + hour.toString() + ":" + minute.toString()
+                    binding.pickupDateTxt.text = dateTime
+                }, startHour, startMinute, true).show()
+            }, startYear, startMonth, startDay).show()
 
-    override fun onClick(v: View){
-        if(v.id == R.id.btn_book){
-            val mPaymentFragment = PaymentFragment()
-            val mFragmentManager = fragmentManager as FragmentManager
-            mFragmentManager
-                .beginTransaction()
-                .replace(R.id.container, mPaymentFragment,
-                    PaymentFragment::class.java.simpleName)
-                .addToBackStack(null)
-                .commit()
+        })
+
+        binding.earCleanOpt.setOnCheckedChangeListener{_,isChecked ->
+            if (isChecked){
+                servicesPicked.add("ear cleaning")
+            }else if(isChecked == false){
+                servicesPicked.remove("ear cleaning")
+            }
+
         }
+        binding.bathOpt.setOnCheckedChangeListener{_,isChecked ->
+            servicesPicked.add("bathing")
+        }
+        binding.nailTrimOpt.setOnCheckedChangeListener{_,isChecked ->
+            servicesPicked.add("nail trimming")
+        }
+        binding.haircutOpt.setOnCheckedChangeListener{_,isChecked ->
+            servicesPicked.add("haircut")
+        }
+        comm = requireActivity() as Communicator
+        binding.btnBook.setOnClickListener(){
+            Log.w("servicesPicked ", servicesPicked.toString())
+            comm.passDataCom(
+                binding.petName.text.toString(),
+                binding.pickupLoc.text.toString(),
+                dateTime,
+                binding.petType.text.toString(),
+                binding.completeCare.id.toString(),
+                servicesPicked
+            )
+        }
+        return binding.root
     }
+
 
 }
