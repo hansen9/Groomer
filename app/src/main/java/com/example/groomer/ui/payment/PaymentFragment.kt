@@ -140,7 +140,7 @@ class PaymentFragment : Fragment(), ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(
                     activity,
-                    "failed to register! Try Again!",
+                    "something's wrong! Try Again!",
                     Toast.LENGTH_LONG
                 ).show()
             }
@@ -153,7 +153,6 @@ class PaymentFragment : Fragment(), ValueEventListener {
     }
 
     override fun onCancelled(error: DatabaseError) {
-        TODO("Not yet implemented")
     }
 
 
