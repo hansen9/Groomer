@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "219826913649",
+    "firebase_url": "https://groomer-ead4a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "groomer-ead4a",
+    "storage_bucket": "groomer-ead4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219826913649:android:4bbc7b49e92d170e39b6d0",
+        "android_client_info": {
+          "package_name": "com.example.groomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219826913649-q20u4jn3lv3cthhns63hg8stm4eta4ab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxUYJCmqOz6FhRLYMZzrRbTTezPdhquC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219826913649-q20u4jn3lv3cthhns63hg8stm4eta4ab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
