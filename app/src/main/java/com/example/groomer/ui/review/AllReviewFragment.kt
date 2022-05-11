@@ -53,10 +53,8 @@ class AllReviewFragment : Fragment() {
 
         databaseReference.child(uid).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-//                tv_item_pemilik?.text = snapshot.child("username").value.toString()
-//                tv_item_komentar.text = snapshot.child("comment").value.toString()
-                  tv_item_pemilik.text = "femi"
-                  tv_item_komentar.text = "terimakasih groomer app"
+                tv_item_pemilik?.text = snapshot.child("username").value.toString()
+                tv_item_komentar.text = snapshot.child("comment").value.toString()
             }
 
             override fun onCancelled(error: DatabaseError) {
