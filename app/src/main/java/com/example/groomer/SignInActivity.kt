@@ -1,6 +1,7 @@
 package com.example.groomer
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,12 +12,15 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
 class SignInActivity : AppCompatActivity() , View.OnClickListener {
     private lateinit var mAuth: FirebaseAuth
     private lateinit var userNameEdit: EditText
     private lateinit var passwordEdit: EditText
+    private lateinit var comm: Communicator
+    private lateinit var database: DatabaseReference
 
     companion object {
         private const val TAG = "EmailPassword"
@@ -36,6 +40,7 @@ class SignInActivity : AppCompatActivity() , View.OnClickListener {
         val btnMoveActivityMenu: Button = findViewById(R.id.btn_join)
         btnMoveActivityMenu.setOnClickListener(this)
 
+
     }
 
     override fun onClick(v: View) {
@@ -52,6 +57,7 @@ class SignInActivity : AppCompatActivity() , View.OnClickListener {
         }
     }
     private fun userLogin() {
+        val sharedPreference:SharedPreference = SharedPreference(this)
         val email = userNameEdit.getText().toString().trim()
         val password = passwordEdit.getText().toString().trim()
 
@@ -79,6 +85,8 @@ class SignInActivity : AppCompatActivity() , View.OnClickListener {
                     val user = mAuth.currentUser
                     val moveIntentMainActivity = Intent(this@SignInActivity, MainActivity::class.java)
                     startActivity(moveIntentMainActivity)
+                    sharedPreference.save("email", email)
+                    sharedPreference.save("password", password)
                 }else{
                     Log.w(TAG, "login failed", task.exception)
                     Toast.makeText(baseContext, "authentication failed",
@@ -88,4 +96,5 @@ class SignInActivity : AppCompatActivity() , View.OnClickListener {
 
 
     }
+
 }

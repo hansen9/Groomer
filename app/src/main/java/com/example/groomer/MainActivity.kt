@@ -1,20 +1,28 @@
 package com.example.groomer
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.groomer.databinding.ActivityMainBinding
 import com.example.groomer.ui.home.HomeFragment
 import com.example.groomer.ui.payment.PaymentFragment
+import com.example.groomer.ui.profile.ProfileFragment
+import com.example.groomer.ui.review.AllReviewFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.form_basic.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.groomer.ButtonMenu
 
 class MainActivity : AppCompatActivity(), Communicator {
 
@@ -22,24 +30,13 @@ class MainActivity : AppCompatActivity(), Communicator {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val mFragmentManager = supportFragmentManager
-        val mHomeFragment = HomeFragment()
-        val fragment = mFragmentManager.findFragmentByTag(HomeFragment::class.java.simpleName)
-
-        if (fragment !is HomeFragment) {
-            Log.d("MyFlexibleFragment", "Fragment Name :" + HomeFragment::class.java.simpleName)
-            mFragmentManager
-                .beginTransaction()
-                .add(R.id.container, mHomeFragment,
-                    HomeFragment::class.java.simpleName)
-                .commit()
-        }
-
-
+        val intent = Intent(this, ButtonMenu::class.java)
+        intent.putExtra("key", R.id.activity_bottom_menu)
+        startActivity(intent)
     }
 
     override fun passDataCom(

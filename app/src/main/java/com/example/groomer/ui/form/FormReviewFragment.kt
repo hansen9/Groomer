@@ -53,6 +53,7 @@ class FormReviewFragment : Fragment() {
                     binding.jenis.text.toString(),
                     binding.treatment.text.toString(),
                     binding.comment.text.toString()
+
                 )
 
                 val id: String

@@ -16,4 +16,6 @@ interface Communicator {
         serviceType: String,
         services: ArrayList<String>
     )
+
+//    fun passData(userName: String , email: String)
 }
