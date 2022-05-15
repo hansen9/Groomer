@@ -62,70 +62,87 @@ class HomeFragment : Fragment() , View.OnClickListener{
     }
 
     override fun onClick(v: View){
-        if(v.id == R.id.btn_menu_complete_care){
-            val mCompleteCFragment = completeCareFragment()
-            val mFragmentManager = fragmentManager as FragmentManager
-            mFragmentManager
-                .beginTransaction()
-                .replace(R.id.container, mCompleteCFragment,
-                    completeCareFragment::class.java.simpleName)
-                .addToBackStack(null)
-                .commit()
-        } else if(v.id == R.id.btn_menu_bathing) {
-            val mBathingFragment = BathingFragment()
-            val mFragmentManager = fragmentManager as FragmentManager
-            mFragmentManager
-                .beginTransaction()
-                .replace(
-                    R.id.container, mBathingFragment,
-                    BathingFragment::class.java.simpleName
-                )
-                .addToBackStack(null)
-                .commit()
-        } else if(v.id == R.id.btn_menu_haircut) {
-            val mHaircutFragment = HaircutFragment()
-            val mFragmentManager = fragmentManager as FragmentManager
-            mFragmentManager
-                .beginTransaction()
-                .replace(
-                    R.id.container, mHaircutFragment,
-                    HaircutFragment::class.java.simpleName
-                )
-                .addToBackStack(null)
-                .commit()
-        } else if(v.id == R.id.btn_menu_ear_cleaning) {
-            val mEarCleanFragment = EarCleanFragment()
-            val mFragmentManager = fragmentManager as FragmentManager
-            mFragmentManager
-                .beginTransaction()
-                .replace(
-                    R.id.container, mEarCleanFragment,
-                    EarCleanFragment::class.java.simpleName
-                )
-                .addToBackStack(null)
-                .commit()
-        } else if(v.id == R.id.btn_menu_nail_trimming) {
-            val mNailTrimFragment = NailTrimFragment()
-            val mFragmentManager = fragmentManager as FragmentManager
-            mFragmentManager
-                .beginTransaction()
-                .replace(
-                    R.id.container, mNailTrimFragment,
-                    NailTrimFragment::class.java.simpleName
-                )
-                .addToBackStack(null)
-                .commit()
-        } else if(v.id == R.id.btn_menu_consument_review){
-            val mFormReviewFragment = FormReviewFragment()
-            val mFragmentManager = fragmentManager as FragmentManager
-            mFragmentManager
-                .beginTransaction()
-                .replace(
-                    R.id.container, mFormReviewFragment,
-                    FormReviewFragment::class.java.simpleName
-                )
-                .addToBackStack(null)
-                .commit()
+        when(v.id){
+            R.id.btn_menu_bathing ->{
+                val mBathingFragment = BathingFragment()
+                val mFragmentManager = fragmentManager as FragmentManager
+                mFragmentManager
+                    .beginTransaction()
+                    .replace(
+                        R.id.nav_host_fragment, mBathingFragment,
+                        BathingFragment::class.java.simpleName
+                    )
+                    .addToBackStack(null)
+                    .commit()
+            }
+            R.id.btn_menu_haircut ->{
+                val mHaircutFragment = HaircutFragment()
+                val mFragmentManager = fragmentManager as FragmentManager
+                mFragmentManager
+                    .beginTransaction()
+                    .replace(
+                        R.id.nav_host_fragment, mHaircutFragment,
+                        HaircutFragment::class.java.simpleName
+                    )
+                    .addToBackStack(null)
+                    .commit()
+            }
+            R.id.btn_menu_ear_cleaning ->{
+                val mEarCleanFragment = EarCleanFragment()
+                val mFragmentManager = fragmentManager as FragmentManager
+                mFragmentManager
+                    .beginTransaction()
+                    .replace(
+                        R.id.nav_host_fragment, mEarCleanFragment,
+                        EarCleanFragment::class.java.simpleName
+                    )
+                    .addToBackStack(null)
+                    .commit()
+            }
+            R.id.btn_menu_nail_trimming ->{
+                val mNailTrimFragment = NailTrimFragment()
+                val mFragmentManager = fragmentManager as FragmentManager
+                mFragmentManager
+                    .beginTransaction()
+                    .replace(
+                        R.id.nav_host_fragment, mNailTrimFragment,
+                        NailTrimFragment::class.java.simpleName
+                    )
+                    .addToBackStack(null)
+                    .commit()
+            }
+            R.id.btn_menu_consument_review ->{
+                val mFormReviewFragment = FormReviewFragment()
+                val mFragmentManager = fragmentManager as FragmentManager
+                mFragmentManager
+                    .beginTransaction()
+                    .replace(
+                        R.id.nav_host_fragment, mFormReviewFragment,
+                        FormReviewFragment::class.java.simpleName
+                    )
+                    .addToBackStack(null)
+                    .commit()
+            }
         }
+//        if(v.id == R.id.btn_menu_complete_care){
+//            val mCompleteCFragment = completeCareFragment()
+//            val mFragmentManager = fragmentManager as FragmentManager
+//            mFragmentManager
+//                .beginTransaction()
+//                .replace(R.id.container, mCompleteCFragment,
+//                    completeCareFragment::class.java.simpleName)
+//                .addToBackStack(null)
+//                .commit()
+//        } else if(v.id == R.id.btn_menu_bathing) {
+//
+//        } else if(v.id == ) {
+//
+//        } else if(v.id == ) {
+//
+//        } else if(v.id == ) {
+//
+//        } else if(v.id == ){
+//
+//        }
     }
 }

@@ -78,7 +78,7 @@ class completeCareFragment : Fragment() {
                 dateTime,
                 binding.petType.text.toString(),
                 binding.completeCare.id.toString(),
-                servicesPicked
+
             )
         }
         return binding.root
