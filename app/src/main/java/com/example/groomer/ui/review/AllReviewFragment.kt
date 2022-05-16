@@ -2,16 +2,19 @@ package com.example.groomer.ui.review
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.groomer.R
+import com.example.groomer.Review
 import com.example.groomer.databinding.FragmentAllReviewBinding
 import com.example.groomer.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.item_review.*
@@ -51,19 +54,36 @@ class AllReviewFragment : Fragment() {
         val review = FirebaseAuth.getInstance().currentUser
         val uid = review!!.uid
 
-        databaseReference.child(uid).addValueEventListener(object : ValueEventListener {
+
+
+//        databaseReference.child(uid).addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+////                tv_item_pemilik?.text = snapshot.child("username").value.toString()
+////                tv_item_komentar.text = snapshot.child("comment").value.toString()
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                TODO("Not yet implemented")
+//            }
+//
+//        })
+
+
+    }
+
+    private fun addReviewEventListener(reviewReference: DatabaseReference){
+        val reviewListener = object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-//                tv_item_pemilik?.text = snapshot.child("username").value.toString()
-//                tv_item_komentar.text = snapshot.child("comment").value.toString()
+                val reviews = snapshot.getValue<Review>()
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Log.w("hello", "loadReview canceled")
             }
 
-        })
+        }
 
-
+        reviewReference.addValueEventListener(reviewListener)
     }
 
 }

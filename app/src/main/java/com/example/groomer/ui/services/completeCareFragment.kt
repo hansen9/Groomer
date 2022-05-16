@@ -13,9 +13,7 @@ import androidx.fragment.app.FragmentManager
 import com.example.groomer.Communicator
 import com.example.groomer.R
 import com.example.groomer.databinding.FragmentCompleteCareBinding
-import com.example.groomer.databinding.FragmentHaircutBinding
 import com.example.groomer.ui.home.CompleteCareModel
-import com.example.groomer.ui.payment.PaymentFragment
 import kotlinx.android.synthetic.main.form_basic.view.*
 import java.text.SimpleDateFormat
 import java.util.*

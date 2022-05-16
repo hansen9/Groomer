@@ -1,5 +1,7 @@
 package com.example.groomer
 
+import java.io.Serializable
+
 class Transaction (
     val userName: String,
     val petName: String,
@@ -8,4 +10,4 @@ class Transaction (
     val petType: String,
     val serviceType: String,
     val price: String
-)
+):Serializable

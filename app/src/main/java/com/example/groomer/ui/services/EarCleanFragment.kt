@@ -2,34 +2,36 @@ package com.example.groomer.ui.services
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.FragmentManager
-import com.example.groomer.Communicator
+import android.widget.EditText
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.groomer.R
-import com.example.groomer.databinding.FragmentEarCleanBinding
-import com.example.groomer.databinding.FragmentNailTrimBinding
-import com.example.groomer.ui.payment.PaymentFragment
+import com.example.groomer.ui.payment.PaymentActivity
 import kotlinx.android.synthetic.main.form_basic.view.*
-import java.text.SimpleDateFormat
 import java.util.*
 
-class EarCleanFragment : Fragment(){
+class EarCleanActivity : AppCompatActivity(){
 
-    private lateinit var comm: Communicator
-    private var earBinding: FragmentEarCleanBinding? = null
+    private lateinit var pickUpDateBtn: Button
+    private lateinit var bookBtn: Button
+    private lateinit var pickUpDateText: TextView
+    private lateinit var petName: EditText
+    private lateinit var pickUpLoc: EditText
+    private lateinit var petType: EditText
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val binding = FragmentEarCleanBinding.inflate(inflater, container, false)
-        earBinding = binding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_ear_clean)
+
+        pickUpDateBtn = findViewById(R.id.pickup_date_btn)
+        pickUpDateText = findViewById(R.id.pickup_date_txt)
+        bookBtn = findViewById(R.id.btn_book)
+        petName = findViewById(R.id.pet_name)
+        petType = findViewById(R.id.pet_type)
+        pickUpLoc = findViewById(R.id.pickup_loc)
 
         var dateTime = ""
         val c = Calendar.getInstance()
@@ -39,28 +41,30 @@ class EarCleanFragment : Fragment(){
         val startHour = c.get(Calendar.HOUR_OF_DAY)
         val startMinute = c.get(Calendar.MINUTE)
 
-        binding.earCleaningLayout.formBasic.pickup_date_btn.setOnClickListener({
-            DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener { _, year, month, day ->
-                TimePickerDialog(requireContext(), TimePickerDialog.OnTimeSetListener { _, hour, minute ->
-                    dateTime = "" + day.toString() + "/" + month.toString() + "/" + year.toString() + " at " + hour.toString() + ":" + minute.toString()
-                    binding.earCleaningLayout.formBasic.pickup_date_txt.text = dateTime
+        pickUpDateBtn.setOnClickListener({
+            DatePickerDialog(this, DatePickerDialog.OnDateSetListener { _, year, month, day ->
+                TimePickerDialog(this, TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+                    dateTime = "" + day.toString() + "/" + month.toString() +
+                            "/" + year.toString() +
+                            " at " + hour.toString() + ":" + minute.toString()
+                    pickUpDateText.text = dateTime
                 }, startHour, startMinute, true).show()
             }, startYear, startMonth, startDay).show()
-
         })
 
-        comm = requireActivity() as Communicator
-        val id = binding.earCleaningLayout
-        binding.earCleaningLayout.formBasic.btn_book.setOnClickListener(){
-            comm.passDataCom(
-                binding.earCleaningLayout.formBasic.pet_name.text.toString(),
-                binding.earCleaningLayout.formBasic.pickup_loc.text.toString(),
-                dateTime,
-                binding.earCleaningLayout.formBasic.pet_type.text.toString(),
-                binding.earCleaning.id.toString()
-            )
+
+
+        bookBtn.setOnClickListener(){
+            val intent = Intent(this@EarCleanActivity, PaymentActivity::class.java).apply {
+                putExtra("pet_name", petName.text.toString())
+                putExtra("pickup_time", dateTime)
+                putExtra("pickup_loc", pickUpLoc.text.toString())
+                putExtra("pet_type", petType.text.toString())
+                putExtra("service_type", "ear cleaning")
+            }
+            startActivity(intent)
+
         }
-        return binding.root
     }
 
 }

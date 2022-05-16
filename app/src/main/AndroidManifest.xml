@@ -23,6 +23,21 @@
             android:name=".SignInActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.services.HaircutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.services.NailTrimActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.services.BathingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.services.EarCleanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.payment.PaymentActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity android:name=".MainActivity" />

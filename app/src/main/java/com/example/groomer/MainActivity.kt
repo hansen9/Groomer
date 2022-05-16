@@ -14,10 +14,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.groomer.databinding.ActivityMainBinding
-import com.example.groomer.ui.home.HomeFragment
-import com.example.groomer.ui.payment.PaymentFragment
-import com.example.groomer.ui.profile.ProfileFragment
-import com.example.groomer.ui.review.AllReviewFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.form_basic.*
