@@ -9,12 +9,15 @@
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/activity_review_add_update.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/activity_sign_in.xml" value="0.18781725888324874" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/activity_sign_up.xml" value="0.67" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/form_basic.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/form_basic.xml" value="0.33" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_all_review.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_complete_care.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_form_review.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_haircut.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_notifications.xml" value="0.11979166666666667" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_payment.xml" value="0.33" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/fragment_payment.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/layout/item_review.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/menu/buttom_nav_menu.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/Groomer/app/src/main/res/menu/menu_form.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Groomer/app/src/main/res/layout/activity_main.xml" value="0.11302083333333333" />

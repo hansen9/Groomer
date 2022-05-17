@@ -5,16 +5,18 @@
     android:id="@+id/form_basic"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <EditText
             android:id="@+id/pet_name"
@@ -24,17 +26,18 @@
             android:hint="your pet name" />
 
         <TextView
+            android:id="@+id/pickup_date_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/pickup_date_txt"
-            android:text=""/>
+            android:text="" />
+
         <Button
             android:id="@+id/pickup_date_btn"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"
-            android:textColor="@color/white"
-            android:hint="your pet pickup date" />
+            android:hint="your pet pickup date"
+            android:textColor="@color/white" />
 
         <EditText
             android:id="@+id/pickup_loc"
@@ -51,21 +54,21 @@
             android:hint="your pet breed" />
     </LinearLayout>
 
-
     <LinearLayout
-        android:layout_width="419dp"
-        android:layout_height="47dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657"
+        android:gravity="center">
 
         <Button
             android:id="@+id/btn_book"
-            android:layout_width="match_parent"
+            android:layout_width="380dp"
             android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="19dp"
             android:text="book" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

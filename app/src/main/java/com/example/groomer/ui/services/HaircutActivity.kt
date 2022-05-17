@@ -13,7 +13,7 @@ import com.example.groomer.ui.payment.PaymentActivity
 import kotlinx.android.synthetic.main.form_basic.view.*
 import java.util.*
 
-class NailTrimActivity : AppCompatActivity() {
+class HaircutActivity : AppCompatActivity() {
 
     private lateinit var pickUpDateBtn: Button
     private lateinit var bookBtn: Button
@@ -24,7 +24,7 @@ class NailTrimActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nail_trim)
+        setContentView(R.layout.activity_haircut)
 
         pickUpDateBtn = findViewById(R.id.pickup_date_btn)
         pickUpDateText = findViewById(R.id.pickup_date_txt)
@@ -55,15 +55,16 @@ class NailTrimActivity : AppCompatActivity() {
 
 
         bookBtn.setOnClickListener(){
-            val intent = Intent(this@NailTrimActivity, PaymentActivity::class.java).apply {
+            val intent = Intent(this@HaircutActivity, PaymentActivity::class.java).apply {
                 putExtra("pet_name", petName.text.toString())
                 putExtra("pickup_time", dateTime)
                 putExtra("pickup_loc", pickUpLoc.text.toString())
                 putExtra("pet_type", petType.text.toString())
-                putExtra("service_type", "nail trimming")
+                putExtra("service_type", "haircut")
             }
             startActivity(intent)
 
         }
     }
+
 }

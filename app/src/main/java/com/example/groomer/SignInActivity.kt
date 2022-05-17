@@ -46,7 +46,7 @@ class SignInActivity : AppCompatActivity() , View.OnClickListener {
     override fun onClick(v: View) {
         when(v.id){
             R.id.btn_sign_up ->{
-                userLogin()
+//                userLogin()
                 val moveIntent = Intent(this@SignInActivity, SignUpActivity::class.java)
                 startActivity(moveIntent)
             }
