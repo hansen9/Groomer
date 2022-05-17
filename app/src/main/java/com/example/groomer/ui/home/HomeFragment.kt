@@ -43,7 +43,7 @@ class HomeFragment : Fragment() , View.OnClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btnCompleteCate: Button = view.findViewById(R.id.btn_menu_complete_care)
+        val btnCompleteCate: Button = view.findViewById(R.id.btn_show_review)
         val btnBathing: Button = view.findViewById(R.id.btn_menu_bathing)
         val btnHaircut: Button = view.findViewById(R.id.btn_menu_haircut)
         val btnEarCleaning: Button = view.findViewById(R.id.btn_menu_ear_cleaning)
@@ -74,6 +74,10 @@ class HomeFragment : Fragment() , View.OnClickListener{
             }
             R.id.btn_menu_nail_trimming ->{
                 val intent = Intent(activity, NailTrimActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.btn_show_review ->{
+                val intent = Intent(activity, ShowReviewActivity::class.java)
                 startActivity(intent)
             }
             R.id.btn_menu_consument_review ->{

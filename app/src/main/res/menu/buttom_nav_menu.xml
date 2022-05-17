@@ -5,10 +5,6 @@
         android:title="@string/home"
         android:icon="@drawable/ic_baseline_home_24"/>
 
-    <item
-        android:id="@+id/navigation_review"
-        android:title="@string/consument_review"
-        android:icon="@drawable/ic_baseline_preview_24"/>
 
     <item
         android:id="@+id/navigation_profile"

@@ -29,19 +29,19 @@ class AllReviewFragment : Fragment() {
         inflater: LayoutInflater , container: ViewGroup? ,
         savedInstanceState: Bundle?
     ): View? {
-        listReview = arrayListOf<Review2>()
-        databaseReference = FirebaseDatabase.getInstance(
-            "https://groomer-ead4a-default-rtdb.asia-southeast1.firebasedatabase.app/"
-        ).getReference("reviews")
-
-        mAuth = Firebase.auth
+//        listReview = arrayListOf<Review2>()
+//        databaseReference = FirebaseDatabase.getInstance(
+//            "https://groomer-ead4a-default-rtdb.asia-southeast1.firebasedatabase.app/"
+//        ).getReference("reviews")
+//
+//        mAuth = Firebase.auth
         val binding = FragmentAllReviewBinding.inflate(inflater, container, false)
-        _binding = binding
-
-        binding.rvReviews.setHasFixedSize(true)
-        binding.rvReviews.layoutManager = LinearLayoutManager(activity)
-        val adapter = ReviewAdapter()
-        binding.rvReviews.adapter = adapter
+//        _binding = binding
+//
+//        binding.rvReviews.setHasFixedSize(true)
+//        binding.rvReviews.layoutManager = LinearLayoutManager(activity)
+//        val adapter = ReviewAdapter()
+//        binding.rvReviews.adapter = adapter
 
         return binding.root
     }
