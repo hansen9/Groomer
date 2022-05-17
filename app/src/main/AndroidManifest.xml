@@ -4,14 +4,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/join"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/join"
         android:supportsRtl="true"
         android:theme="@style/Theme.Groomer">
-        <activity
-            android:name=".AllReviewActivity"
-            android:exported="false" />
         <activity
             android:name=".ReviewAddUpdateActivity"
             android:exported="false" />
@@ -33,6 +30,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.services.EarCleanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.services.ShowReviewActivity"
             android:exported="false" />
         <activity
             android:name=".ui.payment.PaymentActivity"

@@ -16,7 +16,7 @@ class ButtonMenu : AppCompatActivity(){
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
         val appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.navigation_home, R.id.navigation_review, R.id.navigation_profile
+            R.id.navigation_home, R.id.navigation_profile
         ).build()
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
