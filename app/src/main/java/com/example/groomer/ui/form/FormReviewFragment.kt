@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.groomer.Review
+import com.example.groomer.entity.Review2
 import com.example.groomer.databinding.FragmentFormReviewBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -76,7 +76,7 @@ class FormReviewFragment : Fragment() {
         reference.child(uid).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 name = snapshot.child("name").getValue().toString()
-                val review = Review(
+                val review = Review2(
                     name.toString(),
                     jenisPet,
                     treatment,

@@ -1,4 +1,4 @@
-package com.example.groomer
+package com.example.groomer.entity
 
 import java.io.Serializable
 

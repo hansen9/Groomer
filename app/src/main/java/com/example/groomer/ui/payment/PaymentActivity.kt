@@ -9,7 +9,7 @@ import com.example.groomer.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.example.groomer.Transaction
+import com.example.groomer.entity.Transaction
 import com.example.groomer.databinding.ActivityPaymentBinding
 import com.google.firebase.database.*
 

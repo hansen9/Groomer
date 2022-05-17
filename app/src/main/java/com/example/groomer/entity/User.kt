@@ -1,4 +1,4 @@
-package com.example.groomer
+package com.example.groomer.entity
 
 data class User (
     var name: String ,
