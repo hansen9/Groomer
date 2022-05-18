@@ -1,10 +1,12 @@
 package com.example.groomer.ui.payment
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.groomer.ButtonMenu
 import com.example.groomer.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -117,6 +119,14 @@ class PaymentActivity : AppCompatActivity(), ValueEventListener {
                 id  = database.push().getKey().toString()
 
                 database.child(id).setValue(transaction)
+                Toast.makeText(
+                    this@PaymentActivity,
+                    "booking success!",
+                    Toast.LENGTH_LONG
+                ).show()
+
+                val intent = Intent(this@PaymentActivity, ButtonMenu::class.java)
+                startActivity(intent)
             }
 
             override fun onCancelled(error: DatabaseError) {

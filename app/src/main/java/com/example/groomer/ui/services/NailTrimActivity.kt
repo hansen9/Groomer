@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.groomer.R
 import com.example.groomer.ui.payment.PaymentActivity
-import kotlinx.android.synthetic.main.form_basic.view.*
 import java.util.*
 
 class NailTrimActivity : AppCompatActivity() {

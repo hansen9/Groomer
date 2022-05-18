@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
 import com.example.groomer.R
 import com.example.groomer.databinding.FragmentHomeBinding
-import com.example.groomer.ui.form.FormReviewFragment
+import com.example.groomer.ui.form.FormReviewActivity
+import com.example.groomer.ui.review.ShowReviewActivity
 import com.example.groomer.ui.services.*
 
 class HomeFragment : Fragment() , View.OnClickListener{
@@ -81,16 +81,8 @@ class HomeFragment : Fragment() , View.OnClickListener{
                 startActivity(intent)
             }
             R.id.btn_menu_consument_review ->{
-                val mFormReviewFragment = FormReviewFragment()
-                val mFragmentManager = fragmentManager as FragmentManager
-                mFragmentManager
-                    .beginTransaction()
-                    .replace(
-                        R.id.nav_host_fragment, mFormReviewFragment,
-                        FormReviewFragment::class.java.simpleName
-                    )
-                    .addToBackStack(null)
-                    .commit()
+                val intent = Intent(activity, FormReviewActivity::class.java)
+                startActivity(intent)
             }
         }
     }

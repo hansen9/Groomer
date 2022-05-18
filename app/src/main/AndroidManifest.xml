@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Groomer">
         <activity
-            android:name=".ReviewAddUpdateActivity"
-            android:exported="false" />
-        <activity
             android:name=".ButtonMenu"
             android:exported="false"
             android:label="@string/title_activity_button_menu" />
         <activity
             android:name=".SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.form.FormReviewActivity"
             android:exported="false" />
         <activity
             android:name=".ui.services.HaircutActivity"
@@ -32,7 +32,7 @@
             android:name=".ui.services.EarCleanActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.services.ShowReviewActivity"
+            android:name=".ui.review.ShowReviewActivity"
             android:exported="false" />
         <activity
             android:name=".ui.payment.PaymentActivity"

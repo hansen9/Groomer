@@ -9,7 +9,6 @@ object MappingHelper {
         val reviewList = ArrayList<Review>()
         reviewsCursor?.apply {
             while (moveToNext()){
-                val id = getInt(getColumnIndexOrThrow(DatabaseContract.ReviewColumns._ID))
                 val nama = getString(getColumnIndexOrThrow(DatabaseContract.ReviewColumns.Pemilik))
                 val komentar = getString(getColumnIndexOrThrow(DatabaseContract.ReviewColumns.Komentar))
             }
