@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity(), Communicator {
                     HomeFragment::class.java.simpleName)
                 .commit()
         }
+
+
     }
 
     override fun passDataCom(
