@@ -1,21 +1,17 @@
-package com.example.groomer.ui.services
+package com.example.groomer.ui.review
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.groomer.adapter.ReviewAdapter
 import com.example.groomer.databinding.ActivityShowReviewBinding
-import com.example.groomer.entity.Review2
+import com.example.groomer.entity.Review
 import com.google.firebase.database.*
 
 class ShowReviewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityShowReviewBinding
-    private val listReview = ArrayList<Review2>()
+    private val listReview = ArrayList<Review>()
     private var title = "reviews"
     private lateinit var databaseReference: DatabaseReference
     companion object{
@@ -41,11 +37,11 @@ class ShowReviewActivity : AppCompatActivity() {
         ).getReference("reviews")
 
         databaseReference.addValueEventListener(object : ValueEventListener {
-            val listofReview = ArrayList<Review2>()
+            val listofReview = ArrayList<Review>()
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot!!.exists()){
                     for (rev in snapshot.children){
-                        val review = rev.getValue(Review2::class.java)
+                        val review = rev.getValue(Review::class.java)
                         Log.w("the rev is ",rev.toString())
                         listofReview.add(review!!)
                     }

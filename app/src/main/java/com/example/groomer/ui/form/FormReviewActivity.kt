@@ -1,62 +1,57 @@
 package com.example.groomer.ui.form
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import com.example.groomer.R
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
-import com.example.groomer.entity.Review2
-import com.example.groomer.databinding.FragmentFormReviewBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.example.groomer.ButtonMenu
+import com.example.groomer.entity.Review
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
-class FormReviewFragment : Fragment() {
+class FormReviewActivity : AppCompatActivity() {
 
-    private lateinit var formreviewViewModel: FormReviewFragment
-    private var _binding: FragmentFormReviewBinding? = null
     private lateinit var mAuth: FirebaseAuth
     private lateinit var database: DatabaseReference
     private var name: String? = ""
-    private var jenis: String? = ""
-    private var treatment: String? = ""
-    private var comment: String? = ""
+    private lateinit var jenis: EditText
+    private lateinit var treatment: EditText
+    private lateinit var comment: EditText
+    private lateinit var btnPost: Button
+    private lateinit var btnCancel: Button
 
-    override fun onCreateView(
-        inflater: LayoutInflater , container: ViewGroup? ,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_form_review)
         database = FirebaseDatabase.getInstance(
             "https://groomer-ead4a-default-rtdb.asia-southeast1.firebasedatabase.app/"
         ).getReference("reviews")
 
         mAuth = Firebase.auth
 
-        val binding = FragmentFormReviewBinding.inflate(inflater, container, false)
-        _binding = binding
+        jenis = findViewById(R.id.jenis)
+        treatment = findViewById(R.id.treatment)
+        comment = findViewById(R.id.comment)
+        btnPost = findViewById(R.id.post)
+        btnCancel = findViewById(R.id.cancel)
 
-        jenis = binding.jenis.text.toString()
-        treatment = binding.treatment.text.toString()
-        comment = binding.comment.text.toString()
-
-        binding.post.setOnClickListener(){
+        btnPost.setOnClickListener() {
             postReview(
-                binding.jenis.text.toString(),
-                binding.treatment.text.toString(),
-                binding.comment.text.toString()
+                jenis.text.toString(),
+                treatment.text.toString(),
+                comment.text.toString()
             )
-
-            Log.w("jenis", binding.jenis.text.toString())
-            Log.w("treatment", binding.treatment.text.toString())
-            Log.w("comment", binding.comment.text.toString())
-
         }
-
-
-        return binding.root
+        btnCancel.setOnClickListener {
+            val intent = Intent(this@FormReviewActivity, ButtonMenu::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun postReview(
@@ -76,7 +71,7 @@ class FormReviewFragment : Fragment() {
         reference.child(uid).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 name = snapshot.child("name").getValue().toString()
-                val review = Review2(
+                val review = Review(
                     name.toString(),
                     jenisPet,
                     treatment,
@@ -85,24 +80,26 @@ class FormReviewFragment : Fragment() {
 
 
                 val id: String
-                id  = database.push().getKey().toString()
+                id = database.push().getKey().toString()
 
                 database.child(id).setValue(review)
+
+                Toast.makeText(
+                    this@FormReviewActivity,
+                    "review posted",
+                    Toast.LENGTH_LONG
+                ).show()
+                val intent = Intent(this@FormReviewActivity, ButtonMenu::class.java)
+                startActivity(intent)
             }
 
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(
-                    activity,
-                    "failed to register! Try Again!",
+                    this@FormReviewActivity,
+                    "post failed!",
                     Toast.LENGTH_LONG
                 ).show()
             }
         })
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
 }
